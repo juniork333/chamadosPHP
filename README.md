@@ -35,8 +35,7 @@ Com ele é possível:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
-cd seu-repo
+git clone https://github.com/juniork333/chamadosPHP.git
 ```
 
 ### 2. Configuração do Backend (Sistema-chamados)
@@ -45,22 +44,22 @@ cd seu-repo
 
 - composer install (instala dependências do PHP)
 
-- cp .env.example .env (cria arquivo de configuração)
+- .env.example (copie o .env.example crie um .env e cole as informaçoes)
 
-- php artisan key:generate (cria a chave de aplicação)
+- php artisan key:generate (Apos cria o .env de o comando que cria a chave de aplicação)
 
 # Edite o arquivo (.env) e configure o banco de dados:
 
 - DB_CONNECTION=mysql
 - DB_HOST="HOST DO BANCO"
 - DB_PORT="PORTA DO BANCO"
-- DB_DATABASE= ""
+- DB_DATABASE= "NOME DA DATABASE"
 - DB_USERNAME= "NOME DO BANCO"
 - DB_PASSWORD= "SENHA DO BANCO"
 
 # Depois rode:
 
-- php artisan migrate (cria as tabelas)
+- php artisan migrate --seed (cria as tabelas )
 - php artisan serve (inicia o servidor em http://127.0.0.1:8000)
 
 ### 3. Configuração do Frontend (frontend-vue)
@@ -72,7 +71,7 @@ cd seu-repo
 ### Login Padrão:
 
 - Usuário: admin
-- Senha: 123456
+- Senha: 1234
 
 ### Estrutura do Projeto:
 
