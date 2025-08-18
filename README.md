@@ -63,10 +63,23 @@ git clone https://github.com/gracianoojr/chamadosPHP.git
 
 # Depois rode:
 
-- php artisan migrate --seed (cria as tabelas )
+- php artisan migrate --seed (criar as tabelas )
 - php artisan serve (inicia o servidor em http://127.0.0.1:8000)
 
-### 3. Configuração do Frontend (frontend-vue)
+### 4. Caso não queira utilizar o migrate para criar as tabelas use isso:
+
+CREATE DATABASE IF NOT EXISTS nomedobanco DEFAULT CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+
+USE nomedobanco;
+CREATE TABLE chamados ( id bigint UNSIGNED NOT NULL AUTO_INCREMENT, titulo
+varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL, descricao text COLLATE
+utf8mb4_unicode_ci NOT NULL, status enum('aberto','em_andamento','fechado')
+COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'aberto', created_at timestamp
+NULL DEFAULT NULL, updated_at timestamp NULL DEFAULT NULL, PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+### 5. Configuração do Frontend (frontend-vue)
 
 - cd frontend-vue
 - npm install (instala dependências do Vue)
