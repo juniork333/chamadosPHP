@@ -35,20 +35,24 @@ Com ele é possível:
 ### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/juniork333/chamadosPHP.git
+git clone https://github.com/gracianoojr/chamadosPHP.git
 ```
 
 ### 2. Configuração do Backend (Sistema-chamados)
 
-- cd Sistema-chamados (entra na pasta do backend)
+- 2.1 cd Sistema-chamados (entra na pasta do backend)
 
-- composer install (instala dependências do PHP)
+- 2.2 composer install (instala dependências do PHP)
 
-- .env.example (copie o .env.example crie um .env e cole as informaçoes)
+- 2.3 .env.example (copie o .env.example crie um .env e cole as informaçoes)
 
-- php artisan key:generate (Apos cria o .env de o comando que cria a chave de aplicação)
+- 2.4 php artisan key:generate (Apos cria o .env de o comando que cria a key)
 
-# Edite o arquivo (.env) e configure o banco de dados:
+### 3. Crie o banco de dados com o comando:
+
+- CREATE DATABASE nome_do_banco_de_dados;
+
+# Edite o arquivo (.env) e configure de acordo com o banco de dados:
 
 - DB_CONNECTION=mysql
 - DB_HOST="HOST DO BANCO"
